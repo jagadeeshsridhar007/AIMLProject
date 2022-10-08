@@ -5,44 +5,65 @@ Created on Thu Oct  6 21:33:19 2022
 @author: JAGADEESH
 """
 import streamlit as st
+
 import librosa
+
+# print(librosa.__version__)
 import matplotlib.pyplot as plt
+# print(matplotlib__version__)
+
+
 import pandas as pd
-import os
+# print(pd.__version__)
+
+# import os
+# print(os.__version__)
+
 import numpy as np 
-import skimage.io
-import warnings
-import mutagen
-from mutagen.wave import WAVE
-import cv2
-import soundfile as sf
-from pydub import AudioSegment
-import matplotlib.pyplot as plt
-from tensorflow.keras.preprocessing import image
+# print(np.__version__)
+
+# import skimage.io
+# import warnings
+# print(warnings.__version__)
+
+# import mutagen
+# from mutagen.wave import WAVE
+# import cv2
+# import soundfile as sf
+# from pydub import AudioSegment
+# import matplotlib.pyplot as plt
+# from tensorflow.keras.preprocessing import image
 from tensorflow import keras
-import IPython.display as ipd
-from tqdm import tqdm
+
+# import IPython.display as ipd
+# from tqdm import tqdm
 import tensorflow as tf
-import seaborn as sns
+
+
+# import seaborn as sns
 from sklearn import metrics
-from keras.preprocessing.image import ImageDataGenerator
+
+
+# from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential
-from keras.layers import Conv2D, MaxPooling2D
+
+# from keras.layers import Conv2D, MaxPooling2D
 from keras.layers import Activation, Dropout, Flatten, Dense,BatchNormalization
 from keras import backend as K
 
-from keras.wrappers.scikit_learn import KerasClassifier
-from sklearn.model_selection import StratifiedKFold
-from scipy.io import wavfile
-import noisereduce as nr
+# from keras.wrappers.scikit_learn import KerasClassifier
+# # from sklearn.model_selection import StratifiedKFold
+# from scipy.io import wavfile
+# import noisereduce as nr
 import joblib
-import pickle
+# import pickle
+
 
 from sklearn.metrics import ConfusionMatrixDisplay,confusion_matrix,classification_report
 from sklearn.metrics import roc_curve,roc_auc_score
-from sklearn.model_selection import cross_val_score, cross_val_predict
-from sklearn import metrics
-from pathlib import Path
+# from sklearn.model_selection import cross_val_score, cross_val_predict
+# # from sklearn import metrics
+# from pathlib import Path
 from sklearn.model_selection import train_test_split
 
 
@@ -102,7 +123,7 @@ if val == 'submit':
     mfcc_features=[]
     Health_ail=[]
     
-    # breathing_deep='C:/AIML-Project/data/Model_testing/breathing-deep.wav'
+    breathing_deep='C:/AIML-Project/data/Model_testing/breathing-deep.wav'
 
     audio, sample_rate = librosa.load(breathing_deep, res_type='kaiser_fast') 
     audio1, sample_rate1 = librosa.load(breathing_shallow, res_type='kaiser_fast')
