@@ -1,12 +1,12 @@
-librosa==0.9.2
-matplotlib==3.5.2
-pandas==1.4.2
-numpy==1.21.5
-keras==2.6.0
-tensorflow==2.6.0
-scipy==1.7.3
+librosa
+matplotlib
+pandas
+numpy
+keras
+tensorflow
+scipy
 sklearn
-joblib==1.1.0
+joblib
 
 
 
